@@ -23,8 +23,9 @@ def sort_character_count(letter_count):
         return dict["count"]
     
     for character in letter_count:
-        d = { "name" : character, "count" : letter_count[character]}
-        list_of_dicts.append(d)
+        if character.isalpha():
+            d = { "name" : character, "count" : letter_count[character]}
+            list_of_dicts.append(d)
     
     list_of_dicts.sort(reverse=True, key = sort_on)
-    return letter_count
+    return list_of_dicts

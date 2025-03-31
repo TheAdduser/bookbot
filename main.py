@@ -14,9 +14,9 @@ def main():
     print(f"----------- Word Count ----------")
     print(f"Found {count_words(book_text)} total words")
     print(f"--------- Character Count -------")
-    print(sort_character_count(book_text))
-    # for letter in sort_character_count(book_text):
-    #     if letter.isalpha(letter) == True:
-    #         print(f"{letter["name"]}: {letter["count"]}")
-    
+    letter_count = sort_character_count(count_characters(book_text))
+    for letter in letter_count:
+        name = letter["name"]
+        count = letter["count"]
+        print(f"{name}: {count}")
 main()
